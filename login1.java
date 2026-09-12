@@ -1,5 +1,5 @@
 public class main{
    public staic void main{
-      System.out.println("Number Addition: " , 10+10);
+      System.out.println("i value: " , 50);
    }
 }
