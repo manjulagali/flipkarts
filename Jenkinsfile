@@ -20,12 +20,6 @@ pipeline {
             }
         }
 
-        stage{
-            steps('Run Tests'){
-                sh 'mvn test'
-            }
-        }
-
         stage('Package as WAR'){
             steps{
                 sh 'mvn package'
