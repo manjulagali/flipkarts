@@ -1,4 +1,4 @@
-FROM ubuntu:22:04
+FROM ubuntu:22.04
 RUN apt-get update
 RUN apt-get install -y openjdk-21-jdk
 ENV JAVA_HOME /usr
