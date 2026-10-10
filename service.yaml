@@ -5,13 +5,13 @@ metadata:
   name: nginx-prod-service
   labels:
     app: nginx-app-prod-service
-    
+
 spec:
   selector:
     app: nginx-prod
-    
+
   type: LoadBalancer
-  
+ 
   ports:
-    -port:80
-    targetrPort:80
+   - port: 80
+     targetPort: 80
