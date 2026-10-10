@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: nginx-prod-service
+  labels:
+    app: nginx-app-prod-service
+spec:
+  selector:
+    app: nginx-prod
+  type: LoadBalancer
+  ports:
+    -port:80
+     targetrPort: 80
