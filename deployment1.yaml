@@ -19,5 +19,5 @@ spec:
           image: 9144/flipkarts102-img
           ports:
             - containerPort: 8080
-          command: ["/bin/sh:]"]
+          command: ["/bin/sh"]
           args: ["-c", "/root/apache-tomcat-11.0.26/bin/startup.sh; while true; do sleep 1; done;"]
