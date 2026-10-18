@@ -12,7 +12,7 @@ spec:
   maxReplicas: 10
   metrics:
     - type: Resource
-      resouce:
+      resource:
         name: cpu
         target:
           tyoe: Utilization
