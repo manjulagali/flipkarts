@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   scaleTargetRef:
-    apiVersion: appps/v1
+    apiVersion: apps/v1
     kind: Deployment
     name: php-apache
   minReplicas: 1
