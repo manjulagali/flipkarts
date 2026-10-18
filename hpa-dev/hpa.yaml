@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: php-apache-hpa
+  namespace: dev
+spec:
+  scaleTargetRef:
+    apiVersion: appps/v1
+    kind: Deployment
+    name: php-apache
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resouce:
+        name: cpu
+        target:
+          tyoe: Utilization
+          averageUtilization: 50
