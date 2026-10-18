@@ -5,7 +5,7 @@ umask 077
 CLUSTER="eks-demol1"
 REGION="us-east-1"
 NAMESPACE="default"
-IAM_CONFIG="/root/eks-iam.yml"
+IAM_CONFIG="/root/eks-iam.yaml"
 WORK_DIR="/root/rbac-lab"
 
 cd "$WORK_DIR"
