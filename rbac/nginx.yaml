@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rbac-demo-nginx
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rbac-demo-nginx
+  template:
+    metadata:
+      labels:
+        app: rbac-demo-nginx
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - name: nginx
+          image: nginx:stable
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rbac-demo-nginx-service
+  namespace: default
+spec:
+  type: ClusterIP
+  selector:
+    app: rbac-demo-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
